@@ -6,9 +6,12 @@ const getStyle = config => ({
   height: '100vh',
 });
 
-const Display = ({ colors }) => (
-  <div style={getStyle(colors)} />
-);
+const Display = ({ colors }) => {
+    console.log(colors)
+    return (
+        <div style={getStyle(colors)} />
+      )
+};
 
 Display.propTypes = {
   colors: PropTypes.objectOf(PropTypes.string).isRequired,
