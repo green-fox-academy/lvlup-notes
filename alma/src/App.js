@@ -1,10 +1,12 @@
 import React from 'react';
-import SlidersContainer from './SlidersContainer';
+import SliderContainer from './SliderContainer';
 import DisplayContainer from './DisplayContainer';
 
 const App = () => (
   <div className="App">
-    <SlidersContainer />
+    <SliderContainer color="r" />
+    <SliderContainer color="g" />
+    <SliderContainer color="b" />
     <DisplayContainer />
   </div>
 );

@@ -1,22 +1,22 @@
 import { connect } from 'react-redux';
-import Sliders from './components/Sliders';
+import Slider from './components/Slider';
 import sliding from './actions/sliderAction';
 
 const mapStateToProps = (state) => {
   return {
-    colors: ['r', 'g', 'b'],
+    color: state.color
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, props) => {
   return {
-   sliding: (event) => dispatch(sliding(event, 'g'))
+   sliding: (event) => dispatch(sliding(event, props.color))
   }
 }
 
 const SlidersContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Sliders)
+)(Slider)
 
 export default SlidersContainer;
